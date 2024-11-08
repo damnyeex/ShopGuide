@@ -5,6 +5,7 @@ import sass from "sass";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/ShopGuide",
   plugins: [react(), svgr()],
   css: {
     preprocessorOptions: {
