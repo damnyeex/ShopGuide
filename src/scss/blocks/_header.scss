@@ -1,0 +1,198 @@
+.header {
+    width: 1600px;
+    height: 810px;
+    background-image: url('../assets/image/header-background.png');
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 22px 160px 0;
+    margin-bottom: 155px;
+}
+
+.header-icon__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px; 
+
+    & img {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+    }
+}
+
+.header__button {
+    width: 216px;
+    border-radius: 5px;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+        background-color: #29D3D1;
+        transform: scale(1.05);
+
+            & p {
+            color: #FFFFFF;
+            }
+        }
+
+        & p {
+            @include fontOptions("FuturaDemiC", 18px, 600, 20px);
+            color: #FFFFFF;
+            padding: 10px 20px;
+        }
+}
+
+.header__advertising-wrapper {
+    max-height: 578px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header__adversiting-shop-guide {
+    position: relative;
+    top:32px;
+    left: 85px;
+    width: 517px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__advertising-shares-wrapper {
+    height: 50px;
+    align-self: flex-end;
+    position: relative;
+    bottom: -13px;
+
+    .header__adversiting-shares {
+        width: 244px;
+        padding: 10px 10px;
+        background-color:#29D3D1;
+        overflow: hidden; 
+        
+        & p {
+            @include fontOptions("Montserrat", 16px, 400, 19.5px);
+            color:#FFFFFF;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0; 
+        width: 12px; 
+        height: 12px; 
+        background: linear-gradient(0deg, #25B4B2 0%, #29D3D1 100%);
+        transform: rotate(90deg);
+        clip-path: polygon(0 0, 100% 100%, 0 100%); 
+    }
+}
+
+.header__adversiting-app-wrapper {
+    color: #FFFFFF;
+
+    & h1 {
+            @include fontOptions("Montserrat", 76px, 400, 92px);
+    }
+    & span {
+        @include fontOptions("Montserrat", 76px, 700, 92px)
+
+    }
+}
+
+.header__adversiting-app{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
+
+    & .header__adversiting-app-line {
+        width: 183px;
+    }
+
+    & p {
+        @include fontOptions("Montserrat", 16px, 400, 19.5px);
+    }
+}
+
+
+.header__adversiting-app-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+
+    & img {
+        width: 224.5px;
+        height: 64px;
+        transition: color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.header__phone-wrapper{
+    width: 340px;
+    height: 697px;
+    position: relative; 
+    top: -30px;
+    left: -78px;
+
+    & .header__image-phone {
+        position: absolute; 
+        top: 74px;
+        left: 19px;
+        opacity: 1; 
+      }
+  }
+  
+  .header__swiper-button {
+    position: absolute; 
+    left: 50%;
+    bottom: 0; 
+    transform: translate(-50%, 50%);
+    width: 277px;
+    height: 51px;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #29D3D1;
+    box-shadow: 1px 4px 24px rgba(0, 0, 0, 0.35);
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #25B4B2;
+        transform: translate(-50%, 50%) scale(1.1);
+    }
+
+    & p {
+        @include fontOptions("Montserrat", 14px, 600, 17.07px);
+        margin: 0;
+    }
+
+    & .header__swiper-arrow {
+        width: 55px;
+        height: 15px;       
+        transition: transform 0.3s ease; 
+
+        &:hover .header__swiper-arrow {
+            transform: rotate(180deg);
+        }
+      }
+  }

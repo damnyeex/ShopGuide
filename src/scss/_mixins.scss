@@ -1,0 +1,13 @@
+@mixin min-max($min-width, $max-width) {
+    min-width: $min-width;
+    max-width: $max-width;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+@mixin fontOptions( $font-family, $font-size, $font-weight, $line-height) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}

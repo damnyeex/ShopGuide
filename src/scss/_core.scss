@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    @include min-max(390px, 100%);
+    max-width: 1600px;
+}

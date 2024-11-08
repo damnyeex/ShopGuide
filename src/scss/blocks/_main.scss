@@ -1,0 +1,342 @@
+.main {
+    width: 1600px;
+}
+.preview__section {
+    width: 1290px;
+    height: 219px;
+    display: flex;
+    justify-content: center; 
+    margin: 120px auto 0;
+}
+
+.preview__card-list {
+    display: flex;  
+    column-gap: 30px;
+}
+
+ .preview__card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05); 
+    }
+    & img {
+          margin-bottom: 40px; 
+        }
+    
+
+    & h3 {
+        @include fontOptions("Montserrat", 24px, 600, 29.26px);
+        margin-bottom: 20px;
+    }
+
+    & p {
+        @include fontOptions("FuturaDemiC", 18px, 600, 20px);
+        text-align: center;
+        width: 84%;
+    }
+
+    &.catalog-wrapper p {
+        width: 292px;
+    }
+
+    &.notifications-wrapper p {
+        width: 270px;
+        
+    }
+}
+
+.favourites__section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 183px;
+
+    & h2 {
+        margin-left: 10px;
+        transition: $transition-effect;
+        transform: translateY(0);
+
+        &:hover {
+            transform: translateY(-8px); 
+        }
+    }
+}
+
+.favourites__card-wrapper {
+    height: 430px;
+    display: flex; 
+    position: relative;
+    background-color: $bg-color-aqua;
+    
+
+    & h2 {
+        @include fontOptions("Montserrat", 32px, 700, 39.01px);
+        text-align: center;
+        margin-top: 60px;
+        opacity: 0.4;
+        color: $color-white;
+        position: relative;
+        cursor: pointer;
+        transition: $transition-effect;
+
+        &::after {
+            content: "";
+            display: block;
+            border-top: 4px solid #FFFFFF; 
+            opacity: 0;
+            transform: scaleX(0);
+            transition: opacity 0.4s, transform 0.4s;
+            margin-top: 11px;
+        }
+
+         &:hover {
+            opacity: 1;
+            transform: translateY(-8px); 
+
+            &::after {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    & p {
+        @include fontOptions("FuturaPT", 24px, 400, 30px);
+        position: relative;
+        width: 687px;
+        color: $color-white;
+        margin-bottom: auto; 
+        max-width: 80%; 
+        align-self: center; 
+        margin-top: 0px; 
+        transition: opacity 0.5s;
+        left: 10px;
+
+        & span {
+            display: block; 
+            margin-bottom: 20px; 
+        }
+    }
+}
+
+.favourites__card-phone-wrapper {
+    width: 565px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .favourites__card-phone-image {
+    bottom: 12px;
+    width: 243px;
+    position: absolute;
+    }
+}
+
+.favourites__card-list {
+    display: flex;  
+    flex-wrap: wrap;
+    width: 100%; 
+    column-gap: 40px;
+    margin-bottom: 40px;
+    
+}
+
+.favourites__card-item {
+    height: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: $transition-effect;
+
+    & h2 {
+        opacity: 0.4;
+        color: $color-white;
+        position: relative;
+        cursor: pointer;
+        transition: $transition-effect;
+        transform: translateY(0);
+        
+        &::after {
+            content: "";
+            display: block;
+            border-top: 4px solid #FFFFFF;
+            opacity: 0;
+            transform: scaleX(0);
+            transition: opacity 0.4s, transform 0.4s;
+        }
+
+        &:hover {
+            opacity: 1;
+            transform: translateY(-8px); 
+
+            &::after {
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    &.highlighted h2 {
+        opacity: 1;
+
+        &::after {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+    }
+}
+
+.sales__section {
+    display: flex;
+    justify-content: center; 
+    height: 571px;
+    margin-top: 149px;
+    flex-direction: column;
+}
+
+.sales__shares-wrapper {
+    display: flex;
+    align-items: center; 
+    width: 100%;
+    background-color: #EDECEC;
+    height: 406px;
+    position: relative;
+    margin-top: 165px;
+    
+    & h2 {
+        @include fontOptions("Montserrat", 32px, 700, 39.01px);
+        margin-bottom: 30px;
+    }
+}
+
+.sales__text-content {
+    margin-left: 266px;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease; 
+
+    
+    & p {
+        @include fontOptions("FuturaPT", 24px, 400, 30px);
+        color: #000;
+        height: 193px;
+    }
+
+     &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.sales__images {
+    position: absolute;
+    right: 23px; 
+    display: flex;
+    align-items: center;
+
+    & .sales__image-iphone {
+        position: relative;
+        z-index: 2; 
+        top: -82px;
+        left: 174px; 
+        object-fit: contain;
+    }
+
+    & .sales__image-nexus {
+        position: relative;
+        top: -92px;
+        object-fit: contain;
+        z-index: 1;
+        margin-right: 198px;
+    }
+}
+
+.partners__section {
+    flex-direction: column; 
+    text-align: center; 
+
+    & h2 {
+        height: 39px;
+        margin-top: 68px;
+        @include fontOptions("Montserrat", 32px, 700, 39.01px);
+        color: #EB645A;
+    }
+}
+
+.partners__list-wrapper {
+    height: 189px;
+    background-color:#EB645A;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin-top: 28px;
+    overflow-x: auto; 
+    white-space: nowrap; 
+    scroll-behavior: smooth; 
+}
+
+.partners__list-wrapper-image {
+    display: flex;
+    align-items: center;
+    column-gap: 44px; 
+}
+
+.partners__list-wrapper-image img {
+    scroll-snap-align: none; 
+    transition: filter 0.3s ease, transform 0.3s ease;
+    opacity: 0.5;
+}
+
+.partners__list-wrapper-image img:hover {
+    filter: brightness(1.8); 
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.partners__list-arrow {
+    cursor: pointer;
+    margin: 0 20px;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+}
+
+.partners__feedback-wrapper {
+    margin-top: 60px;
+
+    & p {
+        @include fontOptions("FuturaPT", 24px, 400, 30px);
+    }
+}
+
+ .partners__feedback-button {
+        background-color: $bg-color-aqua;
+        padding: 20px 90px;
+        border-radius: 10px;
+        margin-top: 30px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #25B4B2;
+            transform: scale(1.1);
+        }
+
+        & p {
+            @include fontOptions("FuturaDemiC", 18px, 600, 20px);
+            color: $color-white
+        }
+    }
+
+
+
